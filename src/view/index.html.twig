@@ -1,0 +1,48 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+    PHP - TWIG
+{% endblock %}
+
+{% block header %}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Products</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact</a>
+      </li>
+    </ul>
+    </div>
+</nav>
+{% endblock %}
+{% block banner %}
+    <h1 style="text-align:center;">Banner</h1>
+{% endblock %}
+
+
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="row">
+        {% for product in products %}
+            <div class="card text-center col-4">
+                <div class="card-body">
+                    <h5 class="card-title"><a href="#">{{ product }}</a></h5>
+                    <p>Product description</p>
+                </div>
+            </div>
+        {% endfor %}       
+        </div>
+    </div>
+{% endblock %}

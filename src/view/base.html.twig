@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="icon" href="/assets/images/favicon.png">
+    {% block stylesheet %}
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
+        <link rel="stylesheet" href="/assets/css/styles.css">
+{% endblock %}
+</head>
+
+<body>
+    <header class="container-fluid">
+        {% block header %}{% endblock %}
+    </header>
+    <div class="container-fluid" style="background-color:#f3f3f3;">
+        {% block banner %}{% endblock %}
+    </div>
+    {% block content %}{% endblock %}
+    {% block javascript %}{# <<-- appel éventuel du JS Jquery et Bootstrap -->  #}{% endblock %}
+    {% block footer %}{% endblock %}
+</body>
+</html>
